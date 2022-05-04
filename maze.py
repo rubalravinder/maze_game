@@ -19,7 +19,7 @@ class Maze :
         self.eligible_moves[max(self.h)] = 'DLR'
         self.eligible_moves[:,max(self.w)] = 'UDR'
         
-    def
+    defhjhj
 
 
 
