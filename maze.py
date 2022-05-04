@@ -4,11 +4,24 @@ import numpy as np
 
 class Maze :
 
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.grid = np.full((x,y), -1)
-        self.grid[4][6] = 100
-        self.grid[9][2] = 100
+    def __init__(self, h, w):
+        self.h = h
+        self.w = w
+        self.grid = np.full((h,w), -1)
+        self.grid[np.random.randint(0, max(h))][np.random.randint(0, max(w))] = 100
+        self.grid[np.random.randint(0, max(h))][np.random.randint(0, max(w))] = 100
+
+
+    def elegibility(self):
+        self.eligible_moves = np.full((10,10), 'UDLR')
+        self.eligible_moves[0] = 'DLR'
+        self.eligible_moves[:,0] = 'UDR'
+        self.eligible_moves[max(self.h)] = 'DLR'
+        self.eligible_moves[:,max(self.w)] = 'UDR'
+
+
+
+
+
 
     
