@@ -2,7 +2,7 @@ from re import X
 import numpy as np
 
 
-class terrain :
+class Maze :
 
     def __init__(self, x, y):
         self.x = x
